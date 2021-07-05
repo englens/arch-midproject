@@ -2,10 +2,9 @@
 #include "WorldMapGenLib.h"
 #include <iostream>
 
-WORLDMAPGEN_API int worldMapID;
-
 void WorldMapLib::DrawWorld()
 {
+	worldMapID++;
 	std::cout << "World is drawn, enjoy the game";
 }
 
@@ -13,7 +12,6 @@ void WorldMapLib::DrawWorld()
 WorldMapLib::WorldMapLib()
 {
 	worldMapID = 0;
-	worldMapID++;
 	std::cout << "World Map lib called, object of class created ";
 	DrawWorld();
 }

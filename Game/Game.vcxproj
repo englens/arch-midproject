@@ -159,11 +159,17 @@
     <ClCompile Include="Game.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AI\AI.vcxproj">
+      <Project>{72188958-ec51-4cca-8df3-da522893954d}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Animation\Animation.vcxproj">
       <Project>{bed7c3f4-5c83-452a-be63-f1cd8877fd33}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Core\Core.vcxproj">
       <Project>{0cd90ba2-4221-4e69-911d-2f542d04101b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\World Map Generator\World Map Generator.vcxproj">
+      <Project>{31f55d0f-e06c-47fd-8f89-21729ae1071a}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
