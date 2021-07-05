@@ -8,6 +8,7 @@
 class AI_API AILib {
 public:
 	AILib(int numP, int numA);
+	void GetTurn(int numPlayers, int numAI);
 };
 
 extern AI_API int numPlayers;

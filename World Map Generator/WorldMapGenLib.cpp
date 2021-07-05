@@ -1,12 +1,16 @@
 #include "framework.h"
 #include "WorldMapGenLib.h"
-#include "DrawMap.h"
 #include <iostream>
 
 WORLDMAPGEN_API int worldMapID;
 
+void WorldMapLib::DrawWorld()
+{
+	std::cout << "World is drawn, enjoy the game";
+}
+
 //Constructor, assigns variable
-WorlMapLib::WorlMapLib()
+WorldMapLib::WorldMapLib()
 {
 	worldMapID = 0;
 	worldMapID++;

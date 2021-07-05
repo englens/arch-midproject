@@ -5,9 +5,10 @@
 #endif
 
 // This class is exported from the dll
-class WORLDMAPGEN_API WorlMapLib {
+class WORLDMAPGEN_API WorldMapLib {
 public:
-	WorlMapLib(void);
+	WorldMapLib(void);
+	void DrawWorld();
 };
 
 extern WORLDMAPGEN_API int worldMapID;
