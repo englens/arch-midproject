@@ -5,7 +5,9 @@
 #define UI_API __declspec(dllimport)
 #endif
 
-class UI_API PlayerUI{
+class UI_API PlayerUI {
+
+	void InitializeUI();
 
 	void BeginGame();
 

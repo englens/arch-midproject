@@ -2,10 +2,10 @@
 #include "../Core/Core.h"
 #include <iostream>
 #include "../Game/Game.h"
-#include "../World Map Generator/DrawMap.h"
+#include "../World Map Generator/WorldMapGenLib.h"
 
 
-PlayerUI::PlayerUI()
+void PlayerUI::InitializeUI()
 {
 	std::cout << "UI Initalized." << std::endl;
 }
@@ -29,5 +29,5 @@ void PlayerUI::BeginGame()
 void PlayerUI::ShowMap()
 {
 	std::cout << "Generating World..." << std::endl;
-	// DrawWorld newWorld = DrawWorld();
+	// WorldMapGenLib();
 }
