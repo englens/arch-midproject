@@ -7,6 +7,9 @@
 
 // This class is exported from the dll
 class GAME_API Game {
+private:
+	int numPlayers, numAI;
 public:
-	void MainLoop(int numPlayers, int numAI);
+	Game(int numPlayers, int numAI);
+	void MainLoop();
 };

@@ -1,25 +1,33 @@
 #include "Game.h"
-#include "../World Map Generator/DrawMap.h"
+#include "../World Map Generator/WorldMapGenLib.h"
 #include "../Animation/Animation.h"
 #include "../AI/AILib.h"
-#include "../AI/GetTurn.h"
 #include <iostream>
 
-void Game::MainLoop(int numPlayers, int numAI)
+Game::Game(int numP, int numA)
 {
-	int NumPlayers = 1;
-	int NumAI = 1;
-	std::cout << "Entering Main Game Loop." << std::endl; 
-	AILib aiController = AILib(NumPlayers, NumAI);
-	// This would be a while loop if actually implemented
+	numPlayers = numP;
+	numAI = numA;
+	std::cout << "Game Object Created." << std::endl;
+}
 
+void Game::MainLoop()
+{
+
+	std::cout << "Entering Main Game Loop." << std::endl; 
+	AILib aiController = AILib(numPlayers, numAI);
+	WorldMapLib mapDrawer = WorldMapLib();
+
+	// This would be a while loop if actually implemented
 	// 1 - draw map
-	DrawWorld();
+	mapDrawer.DrawWorld();
 	// 2 - get player+AI input
-	GetTurn(NumPlayers, NumAI);
+	aiController.GetTurn(numPlayers, numAI);
 	// 3 - Calculate Damage
 	//TODO: Need name of damage calc class/func
 	// 5 - Draw animation of turns
 	Animation::DrawAnimation();
 	std::cout << "Main Game Loop ended." << std::endl;
 }
+
+
