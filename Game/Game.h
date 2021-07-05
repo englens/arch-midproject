@@ -8,5 +8,5 @@
 // This class is exported from the dll
 class GAME_API Game {
 public:
-	void MainLoop();
+	void MainLoop(int numPlayers, int numAI);
 };
