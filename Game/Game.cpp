@@ -2,10 +2,10 @@
 #include "../World Map Generator/WorldMapGenLib.h"
 #include "../Animation/Animation.h"
 #include "../AI/AILib.h"
-#include <boost/locale.hpp>
+//#include <boost/locale.hpp>
 #include <iostream>
 
-using namespace boost::locale;
+//using namespace boost::locale;
 
 Game::Game(int numP, int numA)
 {
