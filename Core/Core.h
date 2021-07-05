@@ -9,4 +9,5 @@
 class CORE_API Core {
 public:
 	static void MisslePathMath();
+	static bool CheckCriticalHit();
 };
