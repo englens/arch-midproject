@@ -23,6 +23,6 @@ void PlayerUI::ShowStartMessage()
 void PlayerUI::BeginGame()
 {
 	std::cout << "Beginning Game" << std::endl;
-	Game game = Game();
+	Game game = Game(1,1);
 	game.MainLoop();
 }
