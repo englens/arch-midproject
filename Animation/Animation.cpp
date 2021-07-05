@@ -1,24 +1,19 @@
-#include "Animator.h"
+#include "Animation.h"
 #include "../Core/Core.h"
 #include <iostream>
 
-Animator::Animator()
-{
-	std::cout << "Animator object created." << std::endl;
-}
-
-void Animator::CalcMissilePaths()
+void Animation::CalcMissilePaths()
 {
 	Core::MisslePathMath();
 	std::cout << "Calculating Missile Paths for use in Animation." << std::endl;
 }
 
-void Animator::DrawHitExplosions()
+void Animation::DrawHitExplosions()
 {
 	std::cout << "Drawing Hit Explosions." << std::endl;
 }
 
-void Animator::DrawAnimation()
+void Animation::DrawAnimation()
 {
 	std::cout << "Drawing missile animations." << std::endl;
 	CalcMissilePaths();

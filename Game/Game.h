@@ -9,5 +9,4 @@
 class GAME_API Game {
 public:
 	void MainLoop(int numPlayers, int numAI);
-	
 };

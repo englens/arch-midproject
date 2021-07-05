@@ -7,10 +7,9 @@
 
 
 // exported from the dll
-class ANIM_API Animator {
+class ANIM_API Animation {
 public:
-	Animator();
-	void CalcMissilePaths();
-	void DrawHitExplosions();
-	void DrawAnimation();
+	static void CalcMissilePaths();
+	static void DrawHitExplosions();
+	static void DrawAnimation();
 };
