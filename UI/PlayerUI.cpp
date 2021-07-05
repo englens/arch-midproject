@@ -23,11 +23,6 @@ void PlayerUI::ShowStartMessage()
 void PlayerUI::BeginGame()
 {
 	std::cout << "Beginning Game" << std::endl;
-	// game.MainLoop();
-}
-
-void PlayerUI::ShowMap()
-{
-	std::cout << "Generating World..." << std::endl;
-	// WorldMapGenLib();
+	Game game = Game();
+	game.MainLoop();
 }

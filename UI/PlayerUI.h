@@ -14,7 +14,5 @@ class UI_API PlayerUI {
 	void ShowStartMessage();
 
 	void PlayerName();
-
-	void ShowMap();
 };
 
