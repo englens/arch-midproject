@@ -4,7 +4,7 @@
 #include "../Animation/Animator.h"
 #include <iostream>
 
-void Game::MainLoop()
+void Game::MainLoop(int numPlayers, int numAI)
 {
 	int NumPlayers = 1;
 	int NumAI = 1;
