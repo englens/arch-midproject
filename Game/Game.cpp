@@ -16,13 +16,13 @@ Game::Game(int numP, int numA)
 
 void Game::MainLoop()
 {
-	generator gen;
-	gen.add_messages_path(".");
-	gen.add_messages_domain("hello");
+	//generator gen;
+	//gen.add_messages_path(".");
+	//gen.add_messages_domain("hello");
 
-	gen("de_DE.UTF - 8");
-	std::cout.imbue(std::locale());
-	std::cout << translate("Entering Main Game Loop.") << std::endl; 
+	//gen("de_DE.UTF - 8");
+	//std::cout.imbue(std::locale());
+	std::cout << "Entering Main Game Loop." << std::endl; 
 	AILib aiController = AILib(numPlayers, numAI);
 	WorldMapLib mapDrawer = WorldMapLib();
 
