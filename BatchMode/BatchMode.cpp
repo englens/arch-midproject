@@ -5,7 +5,7 @@
 
 int main()
 {
-	std::cout << "Program now running in batch mode";
+	std::cout << "Program now running in batch mode" << std::endl;
 	Game batchGame = Game(0,2);
 	batchGame.MainLoop();
 }
