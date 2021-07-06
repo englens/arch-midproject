@@ -14,8 +14,14 @@ void WorldMapLib::DrawWorld()
 WorldMapLib::WorldMapLib()
 {
 	generator gen;
-	gen.add_messages_path(".");
+	gen.add_messages_path("..\\locale");
 	gen.add_messages_domain("WorldMapGen");
+
+	//-- LANGUAGE SWITCH --
+	std::locale loc = gen("de_DE.UTF-8");
+	//std::locale loc = gen("");
+	std::locale::global(loc);
+	std::cout.imbue(loc);
 	worldMapID = 0;
 	std::cout << translate("World Map lib called, object of class created ") << std::endl;
 	DrawWorld();
