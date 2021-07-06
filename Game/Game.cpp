@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "../Damage Calculation/Damage.h"
 #include "../World Map Generator/WorldMapGenLib.h"
 #include "../Animation/Animation.h"
 #include "../AI/AILib.h"
@@ -30,6 +31,7 @@ void Game::MainLoop()
 	std::cout << translate("Entering Main Game Loop.") << std::endl; 
 	AILib aiController = AILib(numPlayers, numAI);
 	WorldMapLib mapDrawer = WorldMapLib();
+	Damage damage = Damage();
 
 	// This would be a while loop if actually implemented
 	// 1 - draw map

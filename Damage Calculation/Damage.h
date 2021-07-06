@@ -6,6 +6,6 @@
 #endif
 
 class DAMAGE_API Damage {
-
-	int Calculation(int, int);
+public:
+	static void Calculation(int, int);
 };
