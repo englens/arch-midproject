@@ -8,19 +8,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-05 17:44-0700\n"
+"POT-Creation-Date: 2021-07-05 18:46-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: de \n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: Game.cpp:26
+#: Game.cpp:31
 msgid "Entering Main Game Loop."
-msgstr "GERMAN GAME LOOP ENTER"
+msgstr ""
 
-#: Game.cpp:39
+#: Game.cpp:45
 msgid "Main Game Loop ended."
-msgstr "GERMAN GAME LOOP CLOSE"
+msgstr ""
