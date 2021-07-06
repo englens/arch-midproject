@@ -11,14 +11,14 @@ using namespace boost::locale;
 void PlayerUI::InitializeUI()
 {
 	generator gen;
+	gen.add_messages_path("..\\locale");
+	gen.add_messages_domain("Game");
 
-	// Specify location of dictionaries
-	gen.add_messages_path(".");
-	gen.add_messages_domain("x");
-
-	// Generate locales and imbue them to iostream
-	locale::global(gen("de_DE.UTF - 8"));
-	std::cout.imbue(locale());
+	//-- LANGUAGE SWITCH --
+	std::locale loc = gen("de_DE.UTF-8");
+	//std::locale loc = gen("");
+	std::locale::global(loc);
+	std::cout.imbue(loc);
 
 	std::cout << translate("UI Initalized.") << std::endl;
 }

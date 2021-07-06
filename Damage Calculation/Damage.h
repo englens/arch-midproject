@@ -7,5 +7,5 @@
 
 class DAMAGE_API Damage {
 public:
-	int Calculation(int, int);
+	static void Calculation(int, int);
 };
