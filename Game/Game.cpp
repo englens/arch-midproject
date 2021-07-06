@@ -2,6 +2,7 @@
 #include "../World Map Generator/WorldMapGenLib.h"
 #include "../Animation/Animation.h"
 #include "../AI/AILib.h"
+#include "../Damage Calculation/Damage.h"
 #include <boost/locale.hpp>
 #include <iostream>
 
@@ -36,7 +37,7 @@ void Game::MainLoop()
 	// 2 - get player+AI input
 	aiController.GetTurn(numPlayers, numAI);
 	// 3 - Calculate Damage
-	//TODO: Need name of damage calc class/func
+	Damage::Calculation(6, 10); // Numbers have no meaning
 	// 5 - Draw animation of turns
 	Animation::DrawAnimation();
 	std::cout << translate("Main Game Loop ended.") << std::endl;
