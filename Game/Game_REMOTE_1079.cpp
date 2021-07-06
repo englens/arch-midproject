@@ -23,19 +23,15 @@ Game::Game(int numP, int numA)
 
 	numPlayers = numP;
 	numAI = numA;
-
 	std::cout << "Game Object Created." << std::endl;
 }
 
 void Game::MainLoop()
 {
-	int damage1 = 1;
-	int damage2 = 2;
-
 	std::cout << translate("Entering Main Game Loop.") << std::endl; 
 	AILib aiController = AILib(numPlayers, numAI);
 	WorldMapLib mapDrawer = WorldMapLib();
-	Damage damage = Damage(damage1, damage2);
+	Damage damage = Damage();
 
 	// This would be a while loop if actually implemented
 	// 1 - draw map
@@ -43,11 +39,7 @@ void Game::MainLoop()
 	// 2 - get player+AI input
 	aiController.GetTurn(numPlayers, numAI);
 	// 3 - Calculate Damage
-<<<<<<< HEAD
-	damage
-=======
 	Damage::Calculation(6, 10); // Numbers have no meaning
->>>>>>> 5e00354eb8fd172cb814d489e90185a9eabee8c7
 	// 5 - Draw animation of turns
 	Animation::DrawAnimation();
 	std::cout << translate("Main Game Loop ended.") << std::endl;
