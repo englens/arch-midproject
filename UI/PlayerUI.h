@@ -6,7 +6,7 @@
 #endif
 
 class UI_API PlayerUI {
-
+	public:
 	void InitializeUI();
 
 	void BeginGame();
