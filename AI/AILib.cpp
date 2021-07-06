@@ -1,6 +1,8 @@
 #include "framework.h"
 #include "AILib.h"
 #include <iostream>
+#include <boost/locale.hpp>
+using namespace boost::locale;
 
 AI_API int numPlayers;
 
@@ -8,6 +10,7 @@ AI_API int numAI;
 
 void AILib::GetTurn(int numPlayers, int numAI)
 {
+
 	std::cout << "Turn Started";
 	if (numPlayers == 0 && numAI == 2)
 	{
@@ -22,7 +25,7 @@ void AILib::GetTurn(int numPlayers, int numAI)
 	else if (numPlayers == 2 && numAI == 0)
 	{
 		std::cout << "Human Player 1 Moves" << std::endl;
-		std::cout << "Human Player 2 Moves"<< std::endl;
+		std::cout << "Human Player 2 Moves" << std::endl;
 	}
 	else
 	{
@@ -32,8 +35,11 @@ void AILib::GetTurn(int numPlayers, int numAI)
 
 AILib::AILib(int numP, int numA)
 {
+	generator gen;
+	gen.add_messages_path(".");
+	gen.add_messages_domain("AI");
 	numPlayers = numP;
 	numAI = numA;
-	std::cout << "Game initialized with " << numPlayers << " human players and " << numAI << " AI players" << std::endl;
+	std::cout << translate("Game initialized with ") << numPlayers << translate(" human players and ") << numAI << translate(" AI players") << std::endl;
 	GetTurn(numPlayers, numAI);
 }

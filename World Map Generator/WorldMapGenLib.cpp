@@ -1,6 +1,8 @@
 #include "framework.h"
 #include "WorldMapGenLib.h"
 #include <iostream>
+#include <boost/locale.hpp>
+using namespace boost::locale;
 
 void WorldMapLib::DrawWorld()
 {
@@ -11,7 +13,10 @@ void WorldMapLib::DrawWorld()
 //Constructor, assigns variable
 WorldMapLib::WorldMapLib()
 {
+	generator gen;
+	gen.add_messages_path(".");
+	gen.add_messages_domain("WorldMapGen");
 	worldMapID = 0;
-	std::cout << "World Map lib called, object of class created " << std::endl;
+	std::cout << translate("World Map lib called, object of class created ") << std::endl;
 	DrawWorld();
 }
