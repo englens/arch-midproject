@@ -24,5 +24,4 @@ WorldMapLib::WorldMapLib()
 	std::cout.imbue(loc);
 	worldMapID = 0;
 	std::cout << translate("World Map lib called, object of class created ") << std::endl;
-	DrawWorld();
 }
