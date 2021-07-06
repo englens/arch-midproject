@@ -20,4 +20,5 @@ int main()
     std::cout << translate("Greetings Professor Falken. Would you like to play a game?") << std::endl;
 	PlayerUI profFalken;
 	profFalken.InitializeUI();
+	profFalken.BeginGame();
 }
