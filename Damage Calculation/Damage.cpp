@@ -26,5 +26,5 @@ void Damage::Calculation(int attackPower, int targetDefense)
 		damage = damage * 2;
 	}
 	
-	std::cout << translate("Damage Dealt: " + damage) << std::endl;
+	std::cout << translate("Damage Dealt: ") << damage << std::endl;
 }
