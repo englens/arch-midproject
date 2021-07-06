@@ -3,7 +3,6 @@
 #include <iostream>
 #include <boost/locale.hpp>
 
-using namespace::std;
 using namespace boost::locale;
 
 void Animation::CalcMissilePaths()
@@ -14,15 +13,18 @@ void Animation::CalcMissilePaths()
 
 void Animation::DrawHitExplosions()
 {
+	//Locale code block
 	generator gen;
+	gen.add_messages_path("..\\locale");
+	gen.add_messages_domain("Animation");
 
-	// Specify location of dictionaries
-	gen.add_messages_path(".");
-	gen.add_messages_domain("x");
+	//-- LANGUAGE SWITCH --
+	std::locale loc = gen("de_DE.UTF-8");
+	//std::locale loc = gen("");
+	std::locale::global(loc);
+	std::cout.imbue(loc);
+	// End Locale Code
 
-	// Generate locales and imbue them to iostream
-	locale::global(gen("de_DE.UTF - 8"));
-	std::cout.imbue(locale());
 	std::cout << translate("Drawing Hit Explosions.") << std::endl;
 }
 
