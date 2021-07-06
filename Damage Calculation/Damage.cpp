@@ -10,7 +10,7 @@ void Damage::Calculation(int attackPower, int targetDefense)
 {
 	generator gen;
 	gen.add_messages_path("..\\locale");
-	gen.add_messages_domain("Game");
+	gen.add_messages_domain("Damage");
 
 	//-- LANGUAGE SWITCH --
 	std::locale loc = gen("de_DE.UTF-8");
