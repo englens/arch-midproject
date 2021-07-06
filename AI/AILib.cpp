@@ -36,8 +36,14 @@ void AILib::GetTurn(int numPlayers, int numAI)
 AILib::AILib(int numP, int numA)
 {
 	generator gen;
-	gen.add_messages_path(".");
+	gen.add_messages_path("..\\locale");
 	gen.add_messages_domain("AI");
+
+	//-- LANGUAGE SWITCH --
+	std::locale loc = gen("de_DE.UTF-8");
+	//std::locale loc = gen("");
+	std::locale::global(loc);
+	std::cout.imbue(loc);
 	numPlayers = numP;
 	numAI = numA;
 	std::cout << translate("Game initialized with ") << numPlayers << translate(" human players and ") << numAI << translate(" AI players") << std::endl;
