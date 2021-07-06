@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "../Damage Calculation/Damage.h"
 #include "../World Map Generator/WorldMapGenLib.h"
 #include "../Animation/Animation.h"
 #include "../AI/AILib.h"
@@ -25,6 +26,7 @@ void Game::MainLoop()
 	std::cout << "Entering Main Game Loop." << std::endl; 
 	AILib aiController = AILib(numPlayers, numAI);
 	WorldMapLib mapDrawer = WorldMapLib();
+	Damage damage = Damage();
 
 	// This would be a while loop if actually implemented
 	// 1 - draw map
@@ -32,7 +34,7 @@ void Game::MainLoop()
 	// 2 - get player+AI input
 	aiController.GetTurn(numPlayers, numAI);
 	// 3 - Calculate Damage
-	//TODO: Need name of damage calc class/func
+	// damage.Calculation(1, 2);
 	// 5 - Draw animation of turns
 	Animation::DrawAnimation();
 	std::cout << "Main Game Loop ended." << std::endl;
