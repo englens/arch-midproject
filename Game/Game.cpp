@@ -7,6 +7,7 @@
 #include <boost/locale.hpp>
 #include <iostream>
 
+
 using namespace boost::locale;
 
 Game::Game(int numP, int numA)
@@ -42,6 +43,8 @@ void Game::MainLoop()
 	Damage::Calculation(6, 10); // Numbers have no meaning
 	// 5 - Draw animation of turns
 	Animation::DrawAnimation();
+
+	// put observer here
 	std::cout << translate("Main Game Loop ended.") << std::endl;
 }
 
