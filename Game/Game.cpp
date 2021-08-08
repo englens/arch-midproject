@@ -4,24 +4,11 @@
 #include "../Animation/Animation.h"
 #include "../AI/AILib.h"
 #include "../Damage Calculation/Damage.h"
-#include <boost/locale.hpp>
 #include <iostream>
 
 
-using namespace boost::locale;
-
 Game::Game(int numP, int numA)
 {
-	generator gen;
-	gen.add_messages_path("..\\locale");
-	gen.add_messages_domain("Game");
-
-	//-- LANGUAGE SWITCH --
-	std::locale loc = gen("de_DE.UTF-8");
-	//std::locale loc = gen("");
-	std::locale::global(loc);
-	std::cout.imbue(loc);
-
 	numPlayers = numP;
 	numAI = numA;
 	std::cout << "Game Object Created." << std::endl;
@@ -29,7 +16,7 @@ Game::Game(int numP, int numA)
 
 void Game::MainLoop()
 {
-	std::cout << translate("Entering Main Game Loop.") << std::endl; 
+	std::cout << "Entering Main Game Loop." << std::endl; 
 	AILib aiController = AILib(numPlayers, numAI);
 	WorldMapLib mapDrawer = WorldMapLib();
 	Damage damage = Damage();
@@ -45,7 +32,7 @@ void Game::MainLoop()
 	Animation::DrawAnimation();
 
 	// put observer here
-	std::cout << translate("Main Game Loop ended.") << std::endl;
+	std::cout << "Main Game Loop ended." << std::endl;
 }
 
 
