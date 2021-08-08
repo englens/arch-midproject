@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "MockAIBuilder.h"
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
@@ -29,7 +28,7 @@ TEST(AITest, dynamicDifficulty) {
 }
 
 // Ensures the AI is successfully created
-TEST(AITest, difficulty) {
-    MockAIBuilder aibuilder;
-    EXPECT_CALL(aibuilder, Create());
-}
+// TEST(AITest, difficulty) {
+//     MockAIBuilder aibuilder;
+//     EXPECT_CALL(aibuilder, Create());
+// }
