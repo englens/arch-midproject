@@ -25,6 +25,7 @@ public:
 		AIdynamic 
 	};
 
+
 	/** 
 	* Set properties of [AILib](@ref AILib) 
 	*/

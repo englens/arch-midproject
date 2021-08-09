@@ -159,6 +159,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AIBuilder.h" />
     <ClInclude Include="AILib.h" />
     <ClInclude Include="framework.h" />
   </ItemGroup>

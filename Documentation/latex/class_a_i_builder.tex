@@ -1,0 +1,116 @@
+\hypertarget{class_a_i_builder}{}\doxysection{AIBuilder Class Reference}
+\label{class_a_i_builder}\index{AIBuilder@{AIBuilder}}
+
+
+{\ttfamily \#include $<$AIBuilder.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_a_i_builder_a7329f1eb1bc8b06a74c900f3c80475b2}{Difficulty}} \{ \mbox{\hyperlink{class_a_i_builder_a7329f1eb1bc8b06a74c900f3c80475b2acc8f9f9196632a7c6f4db302ab6dd4a4}{easy}}
+, \mbox{\hyperlink{class_a_i_builder_a7329f1eb1bc8b06a74c900f3c80475b2a6b09c66fdd278827e1a1e6351cea8e5f}{medium}}
+, \mbox{\hyperlink{class_a_i_builder_a7329f1eb1bc8b06a74c900f3c80475b2ac8561519e4d6111b48c44bed7e2a7cb0}{hard}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_a_i_builder_ae3bde06db8ecb45b977b3219c1eab1a1}{AIType}} \{ \mbox{\hyperlink{class_a_i_builder_ae3bde06db8ecb45b977b3219c1eab1a1a7e2ff988dfa8d8298a8b2b2ccaac3989}{AIstatic}}
+, \mbox{\hyperlink{class_a_i_builder_ae3bde06db8ecb45b977b3219c1eab1a1a9ae23bfdec418a4c487547aefbfa19a6}{AIdynamic}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_a_i_builder_a35026e9774da7c21c8d27a1e0c9311c8}{set\+AIType}} (\mbox{\hyperlink{class_a_i_builder_ae3bde06db8ecb45b977b3219c1eab1a1}{AIType}} type)
+\item 
+void \mbox{\hyperlink{class_a_i_builder_aaa5accfa563ddff76a659e9e2ca0079f}{set\+Static\+Difficulty}} (\mbox{\hyperlink{class_a_i_builder_ae3bde06db8ecb45b977b3219c1eab1a1}{AIType}} type)
+\item 
+void \mbox{\hyperlink{class_a_i_builder_ae89f0765f5ed33962af88929149548d2}{set\+Starting\+Difficulty}} (\mbox{\hyperlink{class_a_i_builder_a7329f1eb1bc8b06a74c900f3c80475b2}{Difficulty}} dif)
+\item 
+void \mbox{\hyperlink{class_a_i_builder_aacc5d776f166642826485945e8adf34f}{set\+Winning\+Difficulty}} (\mbox{\hyperlink{class_a_i_builder_a7329f1eb1bc8b06a74c900f3c80475b2}{Difficulty}} dif)
+\item 
+void \mbox{\hyperlink{class_a_i_builder_a078eabc54d3ba671132cf5cc2d7e35da}{set\+Losing\+Difficulty}} (\mbox{\hyperlink{class_a_i_builder_a7329f1eb1bc8b06a74c900f3c80475b2}{Difficulty}} dif)
+\item 
+\mbox{\hyperlink{class_a_i_lib}{AILib}} $\ast$ \mbox{\hyperlink{class_a_i_builder_a09ced312c598804d35dda9957d9dccb7}{Create}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_a_i_builder_ae3bde06db8ecb45b977b3219c1eab1a1}\label{class_a_i_builder_ae3bde06db8ecb45b977b3219c1eab1a1}} 
+\index{AIBuilder@{AIBuilder}!AIType@{AIType}}
+\index{AIType@{AIType}!AIBuilder@{AIBuilder}}
+\doxysubsubsection{\texorpdfstring{AIType}{AIType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_a_i_builder_ae3bde06db8ecb45b977b3219c1eab1a1}{AIBuilder\+::\+AIType}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AIstatic@{AIstatic}!AIBuilder@{AIBuilder}}\index{AIBuilder@{AIBuilder}!AIstatic@{AIstatic}}}\mbox{\Hypertarget{class_a_i_builder_ae3bde06db8ecb45b977b3219c1eab1a1a7e2ff988dfa8d8298a8b2b2ccaac3989}\label{class_a_i_builder_ae3bde06db8ecb45b977b3219c1eab1a1a7e2ff988dfa8d8298a8b2b2ccaac3989}} 
+AIstatic&Set one difficulty for \mbox{\hyperlink{class_game}{game}} duration \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AIdynamic@{AIdynamic}!AIBuilder@{AIBuilder}}\index{AIBuilder@{AIBuilder}!AIdynamic@{AIdynamic}}}\mbox{\Hypertarget{class_a_i_builder_ae3bde06db8ecb45b977b3219c1eab1a1a9ae23bfdec418a4c487547aefbfa19a6}\label{class_a_i_builder_ae3bde06db8ecb45b977b3219c1eab1a1a9ae23bfdec418a4c487547aefbfa19a6}} 
+AIdynamic&Adjust difficulty based on \mbox{\hyperlink{class_game}{game}} state \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_a_i_builder_a7329f1eb1bc8b06a74c900f3c80475b2}\label{class_a_i_builder_a7329f1eb1bc8b06a74c900f3c80475b2}} 
+\index{AIBuilder@{AIBuilder}!Difficulty@{Difficulty}}
+\index{Difficulty@{Difficulty}!AIBuilder@{AIBuilder}}
+\doxysubsubsection{\texorpdfstring{Difficulty}{Difficulty}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_a_i_builder_a7329f1eb1bc8b06a74c900f3c80475b2}{AIBuilder\+::\+Difficulty}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{easy@{easy}!AIBuilder@{AIBuilder}}\index{AIBuilder@{AIBuilder}!easy@{easy}}}\mbox{\Hypertarget{class_a_i_builder_a7329f1eb1bc8b06a74c900f3c80475b2acc8f9f9196632a7c6f4db302ab6dd4a4}\label{class_a_i_builder_a7329f1eb1bc8b06a74c900f3c80475b2acc8f9f9196632a7c6f4db302ab6dd4a4}} 
+easy&Set difficulty to easy \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{medium@{medium}!AIBuilder@{AIBuilder}}\index{AIBuilder@{AIBuilder}!medium@{medium}}}\mbox{\Hypertarget{class_a_i_builder_a7329f1eb1bc8b06a74c900f3c80475b2a6b09c66fdd278827e1a1e6351cea8e5f}\label{class_a_i_builder_a7329f1eb1bc8b06a74c900f3c80475b2a6b09c66fdd278827e1a1e6351cea8e5f}} 
+medium&Set difficulty to medium \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{hard@{hard}!AIBuilder@{AIBuilder}}\index{AIBuilder@{AIBuilder}!hard@{hard}}}\mbox{\Hypertarget{class_a_i_builder_a7329f1eb1bc8b06a74c900f3c80475b2ac8561519e4d6111b48c44bed7e2a7cb0}\label{class_a_i_builder_a7329f1eb1bc8b06a74c900f3c80475b2ac8561519e4d6111b48c44bed7e2a7cb0}} 
+hard&Set difficulty to hard \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_a_i_builder_a09ced312c598804d35dda9957d9dccb7}\label{class_a_i_builder_a09ced312c598804d35dda9957d9dccb7}} 
+\index{AIBuilder@{AIBuilder}!Create@{Create}}
+\index{Create@{Create}!AIBuilder@{AIBuilder}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_a_i_lib}{AILib}}$\ast$ AIBuilder\+::\+Create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Build the AI \mbox{\Hypertarget{class_a_i_builder_a35026e9774da7c21c8d27a1e0c9311c8}\label{class_a_i_builder_a35026e9774da7c21c8d27a1e0c9311c8}} 
+\index{AIBuilder@{AIBuilder}!setAIType@{setAIType}}
+\index{setAIType@{setAIType}!AIBuilder@{AIBuilder}}
+\doxysubsubsection{\texorpdfstring{setAIType()}{setAIType()}}
+{\footnotesize\ttfamily void AIBuilder\+::set\+AIType (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_i_builder_ae3bde06db8ecb45b977b3219c1eab1a1}{AIType}}}]{type }\end{DoxyParamCaption})}
+
+Set properties of \mbox{\hyperlink{class_a_i_lib}{AILib}} \mbox{\Hypertarget{class_a_i_builder_a078eabc54d3ba671132cf5cc2d7e35da}\label{class_a_i_builder_a078eabc54d3ba671132cf5cc2d7e35da}} 
+\index{AIBuilder@{AIBuilder}!setLosingDifficulty@{setLosingDifficulty}}
+\index{setLosingDifficulty@{setLosingDifficulty}!AIBuilder@{AIBuilder}}
+\doxysubsubsection{\texorpdfstring{setLosingDifficulty()}{setLosingDifficulty()}}
+{\footnotesize\ttfamily void AIBuilder\+::set\+Losing\+Difficulty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_i_builder_a7329f1eb1bc8b06a74c900f3c80475b2}{Difficulty}}}]{dif }\end{DoxyParamCaption})}
+
+Dynamic\+: Adjust difficulty when player is losing \mbox{\Hypertarget{class_a_i_builder_ae89f0765f5ed33962af88929149548d2}\label{class_a_i_builder_ae89f0765f5ed33962af88929149548d2}} 
+\index{AIBuilder@{AIBuilder}!setStartingDifficulty@{setStartingDifficulty}}
+\index{setStartingDifficulty@{setStartingDifficulty}!AIBuilder@{AIBuilder}}
+\doxysubsubsection{\texorpdfstring{setStartingDifficulty()}{setStartingDifficulty()}}
+{\footnotesize\ttfamily void AIBuilder\+::set\+Starting\+Difficulty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_i_builder_a7329f1eb1bc8b06a74c900f3c80475b2}{Difficulty}}}]{dif }\end{DoxyParamCaption})}
+
+Dynamic\+: Set initial difficulty \mbox{\Hypertarget{class_a_i_builder_aaa5accfa563ddff76a659e9e2ca0079f}\label{class_a_i_builder_aaa5accfa563ddff76a659e9e2ca0079f}} 
+\index{AIBuilder@{AIBuilder}!setStaticDifficulty@{setStaticDifficulty}}
+\index{setStaticDifficulty@{setStaticDifficulty}!AIBuilder@{AIBuilder}}
+\doxysubsubsection{\texorpdfstring{setStaticDifficulty()}{setStaticDifficulty()}}
+{\footnotesize\ttfamily void AIBuilder\+::set\+Static\+Difficulty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_i_builder_ae3bde06db8ecb45b977b3219c1eab1a1}{AIType}}}]{type }\end{DoxyParamCaption})}
+
+Static\+: Set one difficulty for game duration \mbox{\Hypertarget{class_a_i_builder_aacc5d776f166642826485945e8adf34f}\label{class_a_i_builder_aacc5d776f166642826485945e8adf34f}} 
+\index{AIBuilder@{AIBuilder}!setWinningDifficulty@{setWinningDifficulty}}
+\index{setWinningDifficulty@{setWinningDifficulty}!AIBuilder@{AIBuilder}}
+\doxysubsubsection{\texorpdfstring{setWinningDifficulty()}{setWinningDifficulty()}}
+{\footnotesize\ttfamily void AIBuilder\+::set\+Winning\+Difficulty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_i_builder_a7329f1eb1bc8b06a74c900f3c80475b2}{Difficulty}}}]{dif }\end{DoxyParamCaption})}
+
+Dynamic\+: Adjust difficulty when player is winning 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+AI/\mbox{\hyperlink{_a_i_builder_8h}{AIBuilder.\+h}}\end{DoxyCompactItemize}
