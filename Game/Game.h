@@ -9,7 +9,7 @@
 // This class is exported from the dll
 class GAME_API Game {
 private:
-	int numPlayers, numAI;
+	int numPlayers, numAI, player1Health, player2Health;
 public:
 	/** Attaches game observer to main game loop */
 	void Attach(GameObserver* observer);

@@ -6,7 +6,7 @@
 
 using namespace::std;
 using namespace boost::locale;
-void Damage::Calculation(int attackPower, int targetDefense)
+int Damage::Calculation(int attackPower, int targetDefense)
 {
 	generator gen;
 	gen.add_messages_path("..\\locale");
@@ -27,4 +27,5 @@ void Damage::Calculation(int attackPower, int targetDefense)
 	}
 	
 	std::cout << translate("Damage Dealt: ") << damage << std::endl;
+	return damage;
 }
