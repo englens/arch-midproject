@@ -23,7 +23,6 @@ void Game::MainLoop()
 	player1Health = 100;
 	player2Health = 100;
 	int turnNum = 0;
-	int game[3] = { player1Health, player2Health, turnNum };
 	std::string input;
 	// This would be a while loop if actually implemented
 	while (inGame)
@@ -38,11 +37,12 @@ void Game::MainLoop()
 			// 1 - draw map
 			mapDrawer.DrawWorld();
 			// 2 - Update turn information
-			turn.CreateSnapshot(game);
+			turn.CreateSnapshot(player1Health, player2Health, turnNum);
 			// 3 - get player+AI input
 			int* thisTurn = aiController.GetTurn(numPlayers, numAI, player1Health, player2Health);
 			player1Health = thisTurn[0];
 			player2Health = thisTurn[1];
+			turnNum++;
 			// 4 - Draw animation of turns
 			Animation::DrawAnimation();
 		}
@@ -65,7 +65,5 @@ void Game::MainLoop()
 		
 	}
 	// put observer here
-	std::cout << translate("Main Game Loop ended.") << std::endl;
+	std::cout << "Main Game Loop ended." << std::endl;
 }
-
-

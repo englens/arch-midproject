@@ -1,11 +1,10 @@
 #include "Turn.h"
 
-void Turn::CreateSnapshot(int game[3])
+void Turn::CreateSnapshot(int player1HealthIn, int player2HealthIn, int turnNumIn)
 {
-	player1Health = game[0];
-	player2Health = game[1];
-	turnNum++;
-	game[2] = turnNum;
+	player1Health = player1HealthIn;
+	player2Health = player2HealthIn;
+	turnNum = turnNumIn++;
 }
 
 int* Turn::Restore()

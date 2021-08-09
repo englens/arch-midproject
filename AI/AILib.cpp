@@ -1,9 +1,7 @@
 #include "framework.h"
 #include "AILib.h"
 #include <iostream>
-#include <boost/locale.hpp>
 #include "../Damage Calculation/Damage.h"
-using namespace boost::locale;
 
 AI_API int numPlayers;
 
@@ -19,23 +17,23 @@ int* AILib::GetTurn(int numPlayers, int numAI, int player1Health, int player2Hea
 	if (numPlayers == 0 && numAI == 2)
 	{
 		std::cout << "Computer Player 1 Moves" << std::endl;
-		player2Health = player2Health - Damage::Calculation(6, 10);
+		player2Health = player2Health - Damage::Calculation(10, 6);
 		std::cout << "Computer Player 2 Moves" << std::endl;
-		player1Health = player1Health - Damage::Calculation(6, 10);
+		player1Health = player1Health - Damage::Calculation(10, 6);
 	}
 	else if (numPlayers == 1 && numAI == 1)
 	{
 		std::cout << "Human Player 1 Moves" << std::endl;
-		player2Health = player2Health - Damage::Calculation(6, 10);
+		player2Health = player2Health - Damage::Calculation(10, 6);
 		std::cout << "Computer Player Moves" << std::endl;
-		player1Health = player1Health - Damage::Calculation(6, 10);
+		player1Health = player1Health - Damage::Calculation(10, 6);
 	}
 	else if (numPlayers == 2 && numAI == 0)
 	{
 		std::cout << "Human Player 1 Moves" << std::endl;
-		player2Health = player2Health - Damage::Calculation(6, 10);
+		player2Health = player2Health - Damage::Calculation(10, 6);
 		std::cout << "Human Player 2 Moves" << std::endl;
-		player1Health = player1Health - Damage::Calculation(6, 10);
+		player1Health = player1Health - Damage::Calculation(10, 6);
 	}
 	else
 	{
@@ -47,17 +45,10 @@ int* AILib::GetTurn(int numPlayers, int numAI, int player1Health, int player2Hea
 
 AILib::AILib(int numP, int numA)
 {
-	generator gen;
-	gen.add_messages_path("..\\locale");
-	gen.add_messages_domain("AI");
-
-	//-- LANGUAGE SWITCH --
-	std::locale loc = gen("de_DE.UTF-8");
-	//std::locale loc = gen("");
-	std::locale::global(loc);
-	std::cout.imbue(loc);
 	numPlayers = numP;
 	numAI = numA;
-	std::cout << translate("Game initialized with ") << numPlayers << translate(" human players and ") << numAI << translate(" AI players") << std::endl;
-	GetTurn(numPlayers, numAI);
+	std::cout << "Game initialized with " << numPlayers << " human players and " << numAI << " AI players" << std::endl;
+	int player1Health = 100;
+	int player2Health = 100;
+	GetTurn(numPlayers, numAI, player1Health,player2Health);
 }

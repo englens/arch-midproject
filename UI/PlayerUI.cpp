@@ -1,26 +1,14 @@
 #include "PlayerUI.h"
 #include "../Core/Core.h"
 #include <iostream>
-#include <boost/locale.hpp>
 #include "../Game/Game.h"
 #include "../World Map Generator/WorldMapGenLib.h"
 
 using namespace::std;
-using namespace boost::locale;
 
 void PlayerUI::InitializeUI()
 {
-	generator gen;
-	gen.add_messages_path("..\\locale");
-	gen.add_messages_domain("UI");
-
-	//-- LANGUAGE SWITCH --
-	std::locale loc = gen("de_DE.UTF-8");
-	//std::locale loc = gen("");
-	std::locale::global(loc);
-	std::cout.imbue(loc);
-
-	std::cout << translate("UI Initalized.") << std::endl;
+	std::cout << "UI Initalized." << std::endl;
 }
 
 void PlayerUI::PlayerName()
