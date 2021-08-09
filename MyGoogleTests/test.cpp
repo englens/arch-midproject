@@ -2,24 +2,19 @@
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
 
-TEST(TestCaseName, TestName) {
-    EXPECT_EQ(1, 1);
-    EXPECT_TRUE(true);
-};
-
-// Ensures a difficulty type is set
+// Ensures a difficulty type is set, will fail since we have not implemented builder
 TEST(AITest, difficulty) {
     MockAIBuilder aibuilder;
     EXPECT_CALL(aibuilder, setAIType());
 }
 
-// Ensures static difficulty is set
+// Ensures static difficulty is set, will fail since we have not implemented builder
 TEST(AITest, staticDifficulty) {
     MockAIBuilder aibuilder;
     EXPECT_CALL(aibuilder, setStaticDifficulty());
 }
 
-// Ensures dynamic difficulty is set and will adjust
+// Ensures dynamic difficulty is set and will adjust, will fail since we have not implemented builder
 TEST(AITest, dynamicDifficulty) {
     MockAIBuilder aibuilder;
     EXPECT_CALL(aibuilder, setStartingDifficulty());
